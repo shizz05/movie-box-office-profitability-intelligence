@@ -1,0 +1,17 @@
+audit_metric,affected_records,percentage_affected,issue_description,recommended_treatment
+Duplicate movie IDs,0,0.0,Duplicate movie primary keys,Investigate and resolve before loading; none found.
+Duplicate credit movie IDs,0,0.0,Duplicate credits keys,Investigate and resolve before loading; none found.
+Missing homepage,3091,64.36,Null values in homepage,Preserve nulls; do not fabricate values.
+Missing tagline,844,17.57,Null values in tagline,Preserve nulls; do not fabricate values.
+Missing overview,3,0.06,Null values in overview,Preserve nulls; do not fabricate values.
+Missing release_date,1,0.02,Null values in release_date,Preserve nulls; do not fabricate values.
+Missing runtime,2,0.04,Null values in runtime,Preserve nulls; do not fabricate values.
+Invalid release dates,1,0.02,Release date cannot be parsed or is missing,Keep date null; exclude from date-based visuals rather than inventing a date.
+Zero budget,1037,21.59,Budget recorded as zero; may be unknown or genuinely zero,Preserve source value; exclude from ROI denominator.
+Zero revenue,1427,29.71,Revenue recorded as zero; may be unknown or genuinely zero,Preserve source value; exclude from ROI calculations under this project's eligibility rule.
+Non-positive runtime,35,0.73,Runtime is zero or negative,Preserve original value and flag; exclude invalid runtime from runtime analysis.
+Zero vote count,62,1.29,No audience votes recorded,Treat rating as unavailable for audience-rating analysis.
+Duplicate titles,6,0.12,Title repeats across distinct movie IDs,Retain distinct movie IDs; title is not a unique key.
+Movies without genres,28,0.58,No genre associations supplied,Keep movie; genre bridge contains no row for it.
+Movies without production companies,351,7.31,No production company associations supplied,Keep movie; company bridge contains no row for it.
+Movies with valid financials,3229,67.23,Positive budget and positive revenue available,Use these records for profit and ROI; keep other movies in master dataset.

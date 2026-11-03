@@ -1,0 +1,13 @@
+metric,records,notes
+Source movies loaded,4803,All source movie rows read
+Source credits loaded,4803,All source credits rows read
+Unique movie IDs,4803,No duplicate movie IDs
+Unique credit movie IDs,4803,No duplicate credit movie IDs
+Matched one-to-one records,4803,All movie IDs matched to credits
+Rows in cleaned master,4803,No movie rows discarded
+Financially eligible movies,3229,Budget > 0 and revenue > 0
+Movies with missing/invalid release date,1,Date retained as null
+Movies with no genre association,28,Retained; no bridge row
+Movies with no production company association,351,Retained; no bridge row
+Movie-genre bridge rows,12160,One row per movie-genre association
+Movie-company bridge rows,13677,One row per movie-company association
